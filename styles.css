@@ -374,13 +374,48 @@ header img{
 
 /* -----------------------MED SCREEN STYLES-------------------- */
 @media screen and (min-width: 700px){
+  #aboutPlants div,
+  #contactUs div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  #aboutPlants div > img {
+    grid-column: 1 / 2;
+  }
+
+  #aboutPlants div > p {
+    grid-column: 2 / 3;
+  }
+
+  #contactUs div > p {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #contactUs div > img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
   footer div{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding-bottom: 1rem;
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  #socialMedia {
+    grid-column: 1 / 2;
+  }
+
+  #location {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 1rem auto 0 auto;
+    padding-top: 1.75rem;
   }
 }
 
